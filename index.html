@@ -6,6 +6,7 @@
     <title>Web-to-Lead</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <h1>Create Lead</h1>
@@ -14,6 +15,8 @@
       method="POST"
       onsubmit="beforesubmit()"
     >
+    <input type=hidden name='captcha_settings' value='{"keyname":"web_to_lead_miniproject","fallback":"true","orgId":"00D5j00000B9usp","ts":""}'>
+
       <input type="hidden" name="oid" value="00D5j00000B9usp" />
       <input
         type="hidden"
@@ -62,7 +65,7 @@
           type="text" /></span
       ><br /> -->
 
-
+      <div class="g-recaptcha" data-sitekey="6Ldpt0ApAAAAAGU2ZtzL5rB_HFK1ldpm61qJAAA1"></div><br>
       <input type="submit" name="submit" class="submit" />
     </form>
   </body>
